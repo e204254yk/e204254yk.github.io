@@ -1,0 +1,30 @@
+h1{
+    color: #99ffff;
+    text-align: center;
+    background-color:rgba(0,0,0,0.4);
+}
+
+h2{
+    color: #9964ff;
+    text-align: center;
+    background-color:aqua;
+}
+
+h2.pinkclass{
+    color: hotpink;
+    text-align: center;
+    background-color:springgreen;
+}
+
+
+.bluecolor{
+    color: blue;
+    text-align: center;
+    background-color:rgba(21,48,555,0.4);
+}
+body{
+    background-image: url(../images/7.jpg);
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-position: right;
+}
