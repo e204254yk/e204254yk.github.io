@@ -1,0 +1,306 @@
+@charset "UTF-8";
+
+html,body {
+    min-width: 960px;
+}
+.page {
+    position: relative;
+}
+.inr{
+    width: 960px;
+    margin: 0 auto;
+}
+.btn-social-long-insta {
+  /*ボタンの下地*/
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  position: relative;
+  display: inline-block;
+  height: 50px;/*高さ*/
+  width: 190px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 25px;/*文字のサイズ*/
+  line-height: 50px;/*高さと合わせる*/
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+}
+
+.btn-social-long-insta:before {
+  /*グラデーション②*/
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;/*全体を覆う*/
+  height: 100%;/*全体を覆う*/
+  background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+}
+
+.btn-social-long-insta .fa-instagram {
+  /*アイコン*/
+  font-size: 35px;/*アイコンサイズ*/
+  position: relative;
+  top: 4px;/*アイコン位置の微調整*/
+}
+
+.btn-social-long-insta span {
+  /*テキスト*/
+  display:inline-block;
+  position: relative;
+  transition: .5s}
+
+.btn-social-long-insta:hover span {
+  /*ホバーで一周回転*/
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+/*--| page-header--*/
+.page-header{
+    padding: 17px 0;
+}
+.page-header__inr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.page-header__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.page-header-info__txt {
+    margin-right: 30px;
+}
+/* 縦並び */
+.page-header-info__txt span{
+    display: block;
+    font-size: 1.4rem;
+}
+.page-header-info__btn {
+    padding: calc((50px - (1.6rem * 1.5)) / 2) 0;
+    background-color: #ff0600;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fff;
+}
+
+/*--| main-visual--*/
+.main-visual {
+    position: relative;
+    height: 480px;
+    background: center center no-repeat;
+    background-image: url("../images/9.jpg");
+    background-size: cover;
+}
+
+.main-visual__ttl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-weight: normal;
+    font-size: 36px;
+    font-family: "YuGothic", "遊ゴシック";
+    transform: translate(-50%, -50%);
+}
+
+/* 帯 */
+.section-header {
+    position: relative;
+    padding: calc((87px - (30px * 1.6)) / 2) 0;
+    text-align: center;
+    background: #aaa;
+}
+.section-header:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-color: #aaa transparent transparent transparent;
+    border-style: solid;
+    border-width: 28px 28px 0;
+    transform: translate(-50%, 100%);
+    content: "";
+}
+.section-header__ttl {
+    color: #fff;
+    font-weight: normal;
+    font-size: 30px;
+}
+/* intro-section内でのスタイル */
+.intro-section__header {
+    margin-bottom: 100px;
+}
+/* ナビゲーション */
+.intro-section__nav {
+  padding: 88px 0 80px;
+}
+.intro-section__nav ol {
+    display: flex;
+    justify-content: space-between;
+    width: 810px;
+    margin: 0 auto;    
+}
+.intro-section__nav ol li {
+    position: relative;
+    
+}
+.intro-section__nav ol li:after {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    transform: translateX(-50%) rotate(45deg);
+    content: "";
+}
+.intro-section__nav ol li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 230px;
+  height: 230px;
+  padding: 0 25px;
+  color: #000;
+  font-size: 25px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+/* コンテンツ */
+.intro-section__block {
+  display: flex;
+  height: 400px;
+}
+.intro-section__block > * {
+  width: 50%;
+}
+
+/* 偶数番目の場合、横並びを反転 */
+.intro-section__block:nth-child(even) {
+  flex-direction: row-reverse;
+}
+/* 各画像を設定 */
+.intro-section__block:nth-child(1) .intro-section__img-area {
+    background-image:
+url("../images/gakk.jpg");
+}
+.intro-section__block:nth-child(2) .intro-section__img-area {
+    background-image:
+url("../images/a0.jpeg");
+}
+.intro-section__block:nth-child(3) .intro-section__img-area {
+    background-image:
+url("../images/cook.jpg");
+}
+/*　画像エリア　*/
+.intro-section__img-area {
+  background: center center no-repeat;
+  background-size: cover;
+}
+/*　文章エリア　*/
+.intro-section__txt-area {
+    box-sizing: border-box;
+    padding: 30px 20px;
+    color: black;
+    background-color: #aaa;
+}
+/*　タイトル　*/
+.intro-section__txt-area h4 {
+    margin-bottom: 24px;
+    font-weight: normal;
+    font-size: 2rem;
+    color: darkviolet;
+    line-height: 1.5;
+}
+/*　文章　*/
+.intro-section__txt-area p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+/*　問い合わせ　*/
+.intro-section__contact {
+    padding: 100px 0;
+}
+.contact-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 55px 40px 147px;
+    background: #aaa;
+}
+.contact-block__txt {
+    font-size: 2.2rem;
+}
+.contact-block__txt span {
+    display: block;
+    font-size: 1.4rem;
+}
+.contact-block__btn {
+    width: 370px;
+    padding: calc((83px - (2.2rem * 1.6)) / 2) 0;
+    color: #fff;
+    font-size: 2.2rem;
+    text-align: center;
+    background: red;
+}
+/*--| page-header--*/
+.page-footer {
+    padding: 40px 0;
+    background-color: #aaa;
+}
+.page-footer small {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+#page_top{
+    width: 100px;
+    height: 60px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #ef3f98;
+    opacity: 0.6;
+    border-radius: 15px;
+}
+#page_top a{
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 60px;
+    text-decoration: none;
+}
+#page_top a::before{
+    font-family: 'Font Awesome 5 free';
+    font-weight: 900;
+    content: '\f102'
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+#page_top a::after{
+    content: 'PAGE TOP';
+    font-size: 13px;
+    color: #fff;
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
